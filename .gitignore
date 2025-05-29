@@ -1,0 +1,11 @@
+# IntelliJ
+arrays/.idea/
+out/
+.idea
+
+# Optional: Ignore IntelliJ module files
+*.iml
+
+# OS/system files
+.DS_Store
+Thumbs.db
