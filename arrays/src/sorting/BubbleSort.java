@@ -1,7 +1,9 @@
+package sorting;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class InsertionSort {
+public class BubbleSort {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
@@ -10,10 +12,17 @@ public class InsertionSort {
             arr[i] = scanner.nextInt();
         }
 
-        for (int i = 1; i < n; i++) {
-            for (int j = i; j > 0; j--) {
-                if (arr[j-1] > arr[j])  swap(arr, j-1, j);
+        // Logic for the bubble sort
+        boolean didSwap = false;
+        for (int i = n-1; i >=1 ; i--) {
+            for (int j = 0; j <= i-1; j++) {
+                if (arr[j] > arr[j+1]){
+                    swap(arr, j, j+1);
+                    didSwap = true;
+                }
             }
+            if (didSwap)
+                return;
         }
 
         System.out.println(Arrays.toString(arr));
